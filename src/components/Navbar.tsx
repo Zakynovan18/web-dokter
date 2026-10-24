@@ -16,21 +16,21 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/60 bg-surface/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-white">
+      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
         <a
           href="#beranda"
-          className="max-w-[65%] truncate text-lg font-bold text-navy"
+          className="inline-flex h-full max-w-[65%] items-center truncate text-lg font-bold leading-tight text-navy"
         >
           {site.doctor.name}
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden h-full items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-ink transition hover:text-primary"
+                className="inline-flex h-full items-center text-sm font-medium text-ink transition hover:text-primary"
               >
                 {l.label}
               </a>
@@ -42,7 +42,7 @@ export default function Navbar() {
           href={waLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white shadow-card transition hover:bg-primary-dark md:inline-block"
+          className="hidden rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white shadow-card transition hover:bg-primary-dark md:inline-flex md:items-center"
         >
           Hubungi
         </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
           aria-label="Buka menu"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="rounded-lg p-2 text-navy md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-navy md:hidden"
         >
           <svg
             width="24"
@@ -73,7 +73,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/60 bg-white px-5 py-4 md:hidden">
+        <div className="border-t border-navy/10 bg-white px-5 py-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {links.map((l) => (
               <li key={l.href}>
