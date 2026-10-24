@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="mt-6 flex animate-fade-up flex-wrap gap-3 motion-reduce:animate-none"
+            className="mt-6 flex animate-fade-up flex-wrap justify-center gap-3 motion-reduce:animate-none md:justify-start"
             style={{ animationDelay: "440ms" }}
           >
             <a
