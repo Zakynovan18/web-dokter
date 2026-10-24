@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
         <a
           href="#beranda"
-          className="inline-flex h-full max-w-[65%] items-center truncate text-lg font-bold leading-tight text-navy"
+          className="inline-flex h-full min-w-0 max-w-[65%] items-center truncate text-lg font-bold leading-tight text-navy"
         >
           {site.doctor.name}
         </a>
@@ -52,7 +52,7 @@ export default function Navbar() {
           aria-label="Buka menu"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-navy md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-navy md:hidden"
         >
           <svg
             width="24"
