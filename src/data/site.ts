@@ -3,18 +3,18 @@ export const site = {
   description:
     "Informasi profil, layanan, dan jadwal praktik dokter spesialis anak. Hubungi kami dengan mudah melalui WhatsApp.",
   doctor: {
-    name: "dr. Suyanti, Sp.A",
+    name: "Dr. Suyanti, Sp.A",
     specialty: "Dokter Spesialis Anak",
     str: "0000000000000000",
     photo: "/dokter.png",
-    bio: "Lulusan ... dengan pengalaman ... dalam menangani kesehatan anak dan bayi.",
+    bio: " Dokter spesialis anak dengan pengalaman lebih dari 5 tahun dalam menangani berbagai kondisi kesehatan anak. Berkomitmen untuk memberikan pelayanan terbaik bagi pasien dan keluarga.",
     education: [
-      "Spesialis Ilmu Kesehatan Anak, Universitas ... (20XX)",
-      "Pendidikan Dokter, Universitas ... (20XX)",
+      "Spesialis Ilmu Kesehatan Anak, Universitas Airlangga (2012 - 2016)",
+      "Pendidikan Dokter, Universitas Airlangga (2016 - 2018)",
     ],
     experience: [
-      "Dokter Spesialis Anak, RS ... (20XX - sekarang)",
-      "Dokter Umum, Puskesmas ... (20XX - 20XX)",
+      "Dokter Spesialis Anak, RS Bhayangkara (2020 - sekarang)",
+      "Dokter Umum, Puskesmas Gondang (2018 - 2020)",
     ],
     memberships: [
       "Ikatan Dokter Indonesia (IDI)",
@@ -23,7 +23,7 @@ export const site = {
   },
   contact: {
     whatsapp: "6281234567890",
-    phone: "0358-000000",
+    phone: "0358-1234567",
     waMessage: "Halo dokter, saya ingin bertanya tentang jadwal praktik.",
   },
   services: [
