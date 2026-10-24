@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { site } from "@/data/site";
 import { waLink } from "@/lib/utils";
 
@@ -14,37 +14,10 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const previousScrollY = useRef(0);
-
-  useEffect(() => {
-    previousScrollY.current = window.scrollY;
-
-    function handleScroll() {
-      const currentScrollY = window.scrollY;
-      const scrollDelta = currentScrollY - previousScrollY.current;
-
-      if (currentScrollY <= 80) {
-        setHidden(false);
-        previousScrollY.current = currentScrollY;
-        return;
-      }
-
-      if (Math.abs(scrollDelta) >= 8) {
-        setHidden(open ? false : scrollDelta > 0);
-        previousScrollY.current = currentScrollY;
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [open]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b border-navy/10 bg-white transition-transform duration-300 motion-reduce:transition-none ${hidden ? "-translate-y-full" : "translate-y-0"}`}
-    >
-      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5">
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-white">
+      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 py-3">
         <a
           href="#beranda"
           className="inline-flex h-full min-w-0 max-w-[65%] items-center truncate text-lg font-bold leading-tight text-navy"
